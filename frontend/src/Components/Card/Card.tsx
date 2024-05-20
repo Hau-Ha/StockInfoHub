@@ -6,9 +6,9 @@ interface Props {
   price: number;
 };
 
-const Card = ({companyName,ticker,price}: Props) => {
+const Card: React.FC<Props>= ({companyName,ticker,price}: Props): JSX.Element => {
   return (
-    <div className="card">
+  <div className="card">
       <div className="details">
         <h2>{companyName} {ticker}</h2>
         <p>${price}</p>
