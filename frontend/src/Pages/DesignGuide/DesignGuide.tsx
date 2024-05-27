@@ -1,7 +1,7 @@
 import React from "react";
 import Table from "../../Components/Table/Table";
 import RatioList from "../../Components/RatioList/RatioList";
-import { TestDataCompany } from "../../Components/Table/testData";
+import { TestDataCompany, testIncomeStatementData } from "../../Components/Table/testData";
 import { CompanyKeyMetrics } from "../../company";
 
 type Props = {};
@@ -13,7 +13,13 @@ const tableConfig = [
     label: "symbol",
     render: (company: any) => company.symbol,
   },
+  {
+    label: "Market Cap",
+    render: (company: any) => company.marketCapTTM,
+    subTitle: "Total value of all a company's shares of stock",
+  },
 ];
+
 
 const DesignGuide = (props: Props) => {
   return (
@@ -21,7 +27,7 @@ const DesignGuide = (props: Props) => {
       <h1>
       
       </h1>
-      <RatioList config={tableConfig} data={data} />
+      <RatioList config={tableConfig} data={testIncomeStatementData} />
       <Table config={tableConfig} data={data} />
       <h3>
       
