@@ -27,7 +27,7 @@ const DesignGuide = (props: Props) => {
       <h1>
       
       </h1>
-      <RatioList config={tableConfig} data={testIncomeStatementData} />
+      <RatioList config={tableConfig} data={data} />
       <Table config={tableConfig} data={data} />
       <h3>
       

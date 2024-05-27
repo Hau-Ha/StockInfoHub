@@ -1,6 +1,4 @@
 import React from "react";
-import { testIncomeStatementData } from "./testData";
-
 
 type Props = {
     config: any;
